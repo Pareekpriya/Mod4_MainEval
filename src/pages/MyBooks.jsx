@@ -1,4 +1,5 @@
 import { myBooks } from '@/redux/actions/bookAction'
+import { Image, Box } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 
@@ -10,9 +11,10 @@ function MyBooks() {
 
   return (
     <>
-    
+     
+
     </>
-      
+              
   )
 }
 
