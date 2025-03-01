@@ -35,7 +35,11 @@ export const addBook = (updatedbook)=> async(dispatch)=>{
       const res = await axios.put(`https://mainevaluation-1e9d9-default-rtdb.firebaseio.com/http%3A/users/{userId}/myBooks/{bookId}.json`,{
         ...updatedbook
       })
+      dispatch({type:ADD_BOOK_TO_USER_LIST,payload:res.data})
     }catch(err){
         console.error("error in adding book:",err)
     }
 }
+
+
+

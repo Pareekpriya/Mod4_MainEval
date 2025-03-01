@@ -1,4 +1,4 @@
-import { FETCH_BOOK_FAILURE, FETCH_BOOKS_REQUEST, FETCH_BOOKS_SUCCESS, FETCH_MY_BOOKS, LOADING_BOOKS} from "../actions/bookAction";
+import { ADD_BOOK_TO_USER_LIST, FETCH_BOOK_FAILURE, FETCH_BOOKS_REQUEST, FETCH_BOOKS_SUCCESS, FETCH_MY_BOOKS, LOADING_BOOKS} from "../actions/bookAction";
 
 const initState = {
     books: [],
@@ -21,7 +21,11 @@ export const bookReducer = (state=initState,action) =>{
             return {...state, error:"Books Fetching Error"} 
             
         case FETCH_MY_BOOKS:
-            return {...state, myBooks:action.payload}    
+            return {...state, myBooks:action.payload}   
+            
+            
+        // case ADD_BOOK_TO_USER_LIST:
+        //     return {...state,}   
         default:
             return state    
      }
